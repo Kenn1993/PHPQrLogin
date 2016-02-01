@@ -10,8 +10,6 @@ class QrExportAction extends CommonAction{
         //接收参数
         $rand = $this->chkParamInt('rand',true);
         $encryptId = $this->chkParamStr('encryptId',true);
-        //实例化SDK
-        $countSDK = SDK::getSDK('count');
         //实例化redis
         if(!class_exists("SDKcache")){
             //导入缓存类库
